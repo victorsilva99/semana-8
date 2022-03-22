@@ -1,0 +1,15 @@
+variables:
+    SolutionName: 'CRUD.sln'
+
+build:
+  stage: build
+
+  script:
+    - 'dotnet build "CRUD\%SolutionName%"'
+
+tests:
+  stage: test
+
+  script:
+    - 'dotnet test "CRUD\%SolutionName%"'
+
